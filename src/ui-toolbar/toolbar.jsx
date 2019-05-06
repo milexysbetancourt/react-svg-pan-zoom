@@ -7,8 +7,6 @@ import {
 } from '../constants';
 
 import {fitToViewer} from '../features/zoom';
-import IconCursor from './icon-cursor';
-import IconPan from './icon-pan';
 import IconZoomIn from './icon-zoom-in';
 import IconZoomOut from './icon-zoom-out';
 import IconFit from './icon-fit';
@@ -49,24 +47,6 @@ export default function Toolbar({tool, value, onChangeValue, onChangeTool, posit
 
   return (
     <div style={style} role="toolbar">
-      <ToolbarButton
-        toolbarPosition={position}
-        active={tool === TOOL_NONE}
-        name="unselect-tools"
-        title="Selection"
-        onClick={ event => handleChangeTool(event, TOOL_NONE) }>
-        <IconCursor/>
-      </ToolbarButton>
-
-      <ToolbarButton
-        toolbarPosition={position}
-        active={tool === TOOL_PAN}
-        name="select-tool-pan"
-        title="Pan"
-        onClick={ event => handleChangeTool(event, TOOL_PAN) }>
-        <IconPan/>
-      </ToolbarButton>
-
       <ToolbarButton
         toolbarPosition={position}
         active={tool === TOOL_ZOOM_IN}
