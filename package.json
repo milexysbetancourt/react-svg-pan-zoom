@@ -9,6 +9,7 @@
   "jsnext:main": "./build-es/index.js",
   "scripts": {
     "start": "run-p storybook:start",
+    "prepare": "npm run build",
     "build": "run-p clean library:build:commonjs library:build:es library:build:umd library:build:umd_min storybook:build",
     "storybook:start": "start-storybook -p 9001 -s storybook/public -c storybook",
     "storybook:build": "build-storybook -s storybook/public -c storybook -o build-storybook",
